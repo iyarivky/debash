@@ -1,4 +1,4 @@
-<p align="center"><img src="media/shell.png" alt="ayo what?" width=300px></p>
+<p align="center"><img src="media/shell.png" alt="ayo what?" width=250px></p>
 <h1 align="center">DeBash</h1>
 <h3 align="center">online tool that aims to deobfuscate bash scripts using JavaScript</h3>
 
