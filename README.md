@@ -4,8 +4,8 @@
 
 ## Usage
 - Go to https://debash.deno.dev
-- Input your Clash YAML config
-- Press "Convert" button
+- Input your obfuscated bash string
+- Press "Deobfuscate" button
 - Done
 
 pm me [@iya_rivvikyn](https://t.me/iya_rivvikyn) if you wanna ask something or maybe you wanna be my friend 😎
