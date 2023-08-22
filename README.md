@@ -16,6 +16,10 @@ eval "$z$...."
 - Press "Deobfuscate" button
 - Done
 
+> :warning: **Warning** <br>
+Since this project is still a WIP, there are bound to be bugs such as undefined replace, inappropriate deobfuscate results, etc.
+If you want to help this project, you can PR to this repo
+
 ## To-Do
 - Add "Upload File" form
 - idk, my head feels empty, no thoughts
