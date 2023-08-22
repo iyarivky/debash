@@ -1,6 +1,8 @@
 <p align="center"><img src="media/shell.png" alt="ayo what?" width=250px></p>
 <h1 align="center">DeBash</h1>
 <h3 align="center">online tool that aims to deobfuscate bash/shell scripts using JavaScript</h3>
+<br>
+<br>
 
 Can deobfuscate bash/shell script strings that have formats like
 ```shell
