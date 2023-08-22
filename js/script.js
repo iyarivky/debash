@@ -40,7 +40,7 @@ async function deobfuscate(){
           });
         console.error(error)
     }
-}
+};
 
 //copy button
 function copyConfig(outputId) {
@@ -54,7 +54,7 @@ function copyConfig(outputId) {
         fixed: true,
         status: "success"
       });
-  }
+  };
 
 //download button
 function downloadConfig(outputId){
@@ -70,4 +70,47 @@ function downloadConfig(outputId){
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  }
+  };
+
+//upload file button
+function uploadFileButton() {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.sh';
+    fileInput.onchange = event => {
+        const reader = new FileReader();
+        reader.onload = event => {
+            const dataFile = event.target.result;
+            document.getElementById("input").value = dataFile;
+        };
+        reader.readAsText(event.target.files[0]);
+    };
+    fileInput.click();
+};
+
+//drag and drop function
+const dropArea = document.getElementById("drop-area");
+
+dropArea.ondragover = event => {
+    event.preventDefault();
+};
+
+dropArea.ondrop = event => {
+    event.preventDefault();
+    const file = event.dataTransfer.files[0];
+    if (file.name.endsWith('.sh')) {
+        const reader = new FileReader();
+        reader.onload = event => {
+            const dataFile = event.target.result;
+            document.getElementById("input").value = dataFile;
+        };
+        reader.readAsText(file);
+    } else {
+        let fail2 = SnackBar({
+            message: `Error: wrong file extension`,
+            position: "bc",
+            fixed: true,
+            status: "error"
+          });
+    }
+};
