@@ -17,7 +17,6 @@ async function deobfuscate(){
             output += result[keys[i]];
         }
         let removeQuote = output.split("\n")
-        console.log(removeQuote)
         let cleanData = ""
         for (let i= 0; i < removeQuote.length; i++){
             //cleanData += removeQuote[i].replace(/^"|"$|^'|'$/g, '')
