@@ -3,15 +3,13 @@ async function deobfuscate(){
     try{
         let inputText = document.getElementById("input").value;
         let parts = inputText.split('\neval');
-        let result = {};
-        let pairs = parts[0].split(';').filter(item => item !== "");
-        for (let i = 0; i < pairs.length; i++) {
-            let pair = pairs[i].split('=');
-            let key = pair[0];
-            //let value = pair[1].replace(/'/g, "").replace(/"/g, "");
-            let value = pair[1].replace(/'/g, "")
-            result[key] = value;
-        }
+        let result = parts[0].split(';').reduce((acc, item) => {
+            const [key, value] = item.split('=');
+            if (value) {
+                acc[key] = value.slice(1, -1);
+            }
+            return acc;
+        }, {});
         let order = parts[1].replace(/"/g, '');
         let keys = order.split('$').filter(key => key !== "" && key !== " ");
         let output = "";
