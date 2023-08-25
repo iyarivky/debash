@@ -11,7 +11,7 @@ eval "$z$...."
 ```
 
 ## Usage
-- Go to https://debash.deno.dev
+- Go to https://dsh.deno.dev
 - Input your obfuscated bash/shell string or upload your file .sh
 - Press "Deobfuscate" button
 - Done
