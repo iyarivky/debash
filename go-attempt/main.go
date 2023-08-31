@@ -6,8 +6,9 @@ import (
 	"strings"
 )
 
-func stringTheocracy(input string) (string, error) {
-	pairs := strings.Split(input, ";")
+func stringToJSON(input string) (string, error) {
+  pale := strings.ReplaceAll(input, "'\\''", "'")
+	pairs := strings.Split(pale, ";")
 	result := make(map[string]string)
 
 	for _, pair := range pairs {
@@ -28,8 +29,8 @@ func stringTheocracy(input string) (string, error) {
 }
 
 func main() {
-	input := "satu=ich;dua=ni;tiga=san;empat=fa;"
-	jsonResult, err := stringTheocracy(input)
+	input := `Qhz='z$wB';iLz='phas';Kaz='z$PB';ygz='YGz$';uKz='e'\'';C';TYz=''\''pp_';yVz='erce';`
+	jsonResult, err := stringToJSON(input)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
