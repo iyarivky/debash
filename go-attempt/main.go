@@ -7,8 +7,9 @@ import (
 )
 
 func stringToJSON(input string) (string, error) {
-  pale := strings.ReplaceAll(input, "'\\''", "'")
+  	pale := strings.ReplaceAll(input, "'\\''", "'")
 	pairs := strings.Split(pale, ";")
+	fmt.Println(pairs)
 	result := make(map[string]string)
 
 	for _, pair := range pairs {
